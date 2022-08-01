@@ -1,0 +1,126 @@
+<!-- cообщаем браузеру как стоит обрабатывать эту страницу-->
+<!DOCTYPE html> 
+<!--Оболочка документа, указываем язык содержимого-->
+<html lang="ru">
+<!--Заголовок страницы, контейнер для других важных данных (не отображается)-->
+<head>
+   <!--Заголовок страницы в браузере-->
+   <title>anime</title>
+   <!--кодировка страницы-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../assets/css/style.css">
+   <link rel="icon" href="../img/icon.ico" type="image/x-icon" />
+   <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<!--Отображаемое тело страницы-->
+<body>
+   <div class="container">
+      <div class="field">
+         <div class="demo-wrapper" id="wrapper">
+            <svg class="round" width="140" id="point" height="140" viewBox="0 0 140 140">
+               <path class="polymorph" stroke="#8453e3" d="" fill="none"></path>
+            </svg>
+            <div class="new-elements-container" id="newElemContainer">
+
+            </div>
+            <svg class="path" id="path-box" widht="100%" height="100%" viewBox="0 0 1100 480" xmlns="http://www.w3.org/2000/svg"
+               version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+         
+               <path fill="none" stroke="#5d2dbd" stroke-width="2" id="pathA" class="way" d="M0,0">
+               </path>
+            </svg>
+            <div class="user-card skeleton" id="skelet">
+               <div class="user_cover">
+                  <div class="user_avatar">
+                     <img src="../img/user.png" alt="user profile image">
+                  </div>
+            
+               </div>
+               <div class="user_details">
+                  <div id="user" class="user_name hide_text user">Peter Parker</div>
+                  <div id="user" class="user_profession hide_text user">Web <br> Designer</div>
+                  <div id="user" class="user_text hide_text user">
+                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  </div>
+               </div>
+               <div id="user" class="contact_user">
+                  <button class="user"><a href="#"></a></button>
+               </div>
+            
+            </div>
+         </div>
+         
+         <div class="selecting-element">
+            <aside class="side-bar">
+               <div class="figure-button" id="square">
+                  <a class="text-button" href="#">Квадрат</a>
+               </div>
+               <div class="figure-button" id="circle">
+                  <a class="text-button" href="#">Круг</a>
+               </div>
+               <div class="figure-button" id="triangle">
+                  <a class="text-button" href="#">Треугольник</a>
+               </div>
+            
+            </aside>
+            <div class="creation-buttons">
+               <div class="element-button" id="newElementButton">
+                  <div class="vertical-line">
+               
+                  </div>
+                  <div class="horizontal-line">
+               
+                  </div>
+               </div>
+               <div class="element-button" id="createdElementButton">
+                  <svg fill="#8453e3" xmlns="http://www.w3.org/2000/svg" viewBox="-3 -2 30 30" width="30px" height="30px" id="checkMark">
+                     <path
+                        d="M 22.566406 4.730469 L 20.773438 3.511719 C 20.277344 3.175781 19.597656 3.304688 19.265625 3.796875 L 10.476563 16.757813 L 6.4375 12.71875 C 6.015625 12.296875 5.328125 12.296875 4.90625 12.71875 L 3.371094 14.253906 C 2.949219 14.675781 2.949219 15.363281 3.371094 15.789063 L 9.582031 22 C 9.929688 22.347656 10.476563 22.613281 10.96875 22.613281 C 11.460938 22.613281 11.957031 22.304688 12.277344 21.839844 L 22.855469 6.234375 C 23.191406 5.742188 23.0625 5.066406 22.566406 4.730469 Z" />
+                  </svg>
+               </div>
+            </div>
+
+         </div>
+
+      </div>
+      <div class="control">
+         <div class="color-change">
+            <div class="color-button" id="colorChange"></div>
+         </div>
+         <div class="buttons">
+            <div class="path-button" id="start">
+               <a class="text-button" href="#">Пуск</a>
+            </div>
+            <div class="path-button" id="pause">
+               <a class="text-button" href="#">Пауза</a>
+            </div>
+            <div  class="path-button" id="clear">
+               <a class="text-button" href="#">Очистить</a>
+            </div>
+         </div>
+         <div class="slidecontainer">
+            <input type="range" min="0" max="1" value="1" step="0.01" class="slider" id="myRange">
+            <br>
+            <p id="durationText">Скорость: <span id="demo"></span></p>
+         </div>
+      </div>
+
+   </div>
+
+
+
+
+   <script src="../../../anime-master/lib/anime.min.js"></script>
+   <script src="../assets/js/script.js"></script>
+</body>
+</html>
+<!-- 
+M8,56 C8,33.90861 25.90861,16 48,16 C70.09139,16 88,33.90861 88,56 C88,78.09139 105.90861,92 128,92 C150.09139,92 160,72
+160,56 C160,40 148,24 128,24 C108,24 96,40 96,56 C96,72 105.90861,92 128,92 C154,93 168,78 168,56 C168,33.90861
+185.90861,16 208,16 C230.09139,16 248,33.90861 248,56 C248,78.09139 230.09139,96 208,96 L48,96 C25.90861,96 8,78.09139
+8,56 Z -->
